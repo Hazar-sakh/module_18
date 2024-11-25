@@ -1,0 +1,18 @@
+{% extends "menu.html" %}
+
+{% block pagename %}
+    <h1>Команды</h1>
+{% endblock %}
+
+{% block menu %}
+    {{ block.super }}
+{% endblock %}
+
+{% block content %}
+    <ul>
+        <li>{{ first }} <button>Вступить</button></li>
+        <li>{{ second }} <button>Вступить</button></li>
+        <li>{{ third }} <button>Вступить</button></li>
+    </ul>
+    <button><a href="/">Вернуться на главную страницу</a></button>
+{% endblock %}

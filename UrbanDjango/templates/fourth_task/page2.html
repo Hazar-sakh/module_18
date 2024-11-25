@@ -1,0 +1,16 @@
+{% extends "menu.html" %}
+
+{% block pagename %}
+    <h1>Судьи</h1>
+{% endblock %}
+
+{% block menu %}
+    {{ block.super }}
+{% endblock %}
+
+{% block content %}
+    {% for i in list_of_referees %}
+        <p>{{ i }} <button>Написать</button></p>
+    {% endfor %}
+    <button><a href="/">Вернуться на главную страницу</a></button>
+{% endblock %}
