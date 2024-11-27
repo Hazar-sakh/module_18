@@ -1,0 +1,33 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Регистрация</title>
+    <link rel = "stylesheet" type = "text/css" href = '{% static "style.css"%}'>
+</head>
+<body>
+    <h2>{{ info.error }}</h2>
+    <form method="post">
+        {% csrf_token %}
+
+        <label for="username">Логин</label>
+        <input type="text" id="username" name="username" maxlength="30" placeholder="Введите логин" required>
+
+        <label for="password">Пароль</label>
+        <input type="text" id="password" name="password" minlength="8" placeholder="Введите пароль" required>
+
+        <label for="repeat_password">Повтор пароля</label>
+        <input type="text" id="repeat_password" name="repeat_password" minlength="8" placeholder="Повторите пароль" required>
+
+        <label for="age">Возраст</label>
+        <input type="text" id="age" name="age" maxlength="3" placeholder="Введите свой возраст" required>
+
+        <button type="submit">Зарегистрироваться</button>
+    </form>
+
+    <h2 align="center">{{ uZr }}</h2>
+
+</body>
+</html>
