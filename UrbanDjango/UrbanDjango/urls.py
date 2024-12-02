@@ -23,5 +23,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', main_page),
     path('page1/', page1),
-    path('page2/', page2.as_view())
+    path('page2/', page2)
 ]

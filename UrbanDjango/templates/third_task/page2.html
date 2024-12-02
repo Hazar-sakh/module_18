@@ -6,11 +6,11 @@
 </head>
 <body>
     <h1>Судьи</h1>
+    {% for i in list_of_referees %}
     <ul>
-        <li>Дроздов А. - 1 категория <button>Вступить</button></li>
-        <li>Болотова С. - 2 категория <button>Вступить</button></li>
-        <li>Лаврентьев Е. - 3 категория <button>Вступить</button></li>
+        <li> {{ i }} <button>Написать</button></li>
     </ul>
-    <button><a href="/">Вернуться на главную страницу</a></button>
+    {% endfor %}
+    <input type="button" value="Вернуться на главную страницу" onclick='window.location="/"'>
 </body>
 </html>
